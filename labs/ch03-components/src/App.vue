@@ -35,7 +35,7 @@
         </div>
       </div>
     </section>
-    <section id="exp-04"><p class="muted">（任务 8 完成后挂载 ScopedLab）</p></section>
+    <section id="exp-04"><ScopedLab /></section>
     <section id="exp-05"><p class="muted">（任务 9 完成后挂载 PropsLab）</p></section>
     <section id="exp-06"><p class="muted">（任务 10 完成后挂载 EmitLab）</p></section>
     <section id="exp-07"><p class="muted">（任务 11 完成后挂载 ProvideInjectLab）</p></section>
@@ -47,10 +47,11 @@ import CountOptions from './experiments/01-apis/CountOptions.vue'
 import CountSetup from './experiments/01-apis/CountSetup.vue'
 import LifecycleDemo from './experiments/02-lifecycle/LifecycleDemo.vue'
 import LocalDemo from './experiments/03-register/LocalDemo.vue'
+import ScopedLab from './experiments/04-scoped/ScopedLab.vue'
 
 export default {
   name: 'App',
-  components: { CountOptions, CountSetup, LifecycleDemo, LocalDemo }
+  components: { CountOptions, CountSetup, LifecycleDemo, LocalDemo, ScopedLab }
 }
 </script>
 
