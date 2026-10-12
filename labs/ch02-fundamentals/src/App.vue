@@ -14,7 +14,7 @@
     <section id="exp-01"><ModifierChainLab /></section>
     <section id="exp-02"><ComputedLab /></section>
     <section id="exp-03"><WatchLab /></section>
-    <section id="exp-04"><p class="muted">（任务 4 完成后挂载 StyleBindingLab）</p></section>
+    <section id="exp-04"><StyleBindingLab /></section>
   </div>
 </template>
 
@@ -22,10 +22,11 @@
 import ModifierChainLab from './experiments/01-modifier-chain/ModifierChainLab.vue'
 import ComputedLab from './experiments/02-computed/ComputedLab.vue'
 import WatchLab from './experiments/03-watch/WatchLab.vue'
+import StyleBindingLab from './experiments/04-style-binding/StyleBindingLab.vue'
 
 export default {
   name: 'App',
-  components: { ModifierChainLab, ComputedLab, WatchLab }
+  components: { ModifierChainLab, ComputedLab, WatchLab, StyleBindingLab }
 }
 </script>
 
