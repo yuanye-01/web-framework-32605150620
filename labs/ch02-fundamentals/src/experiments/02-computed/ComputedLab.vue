@@ -18,7 +18,8 @@
     <ul class="notes">
       <li v-for="(note, index) in filteredNotes" :key="note.id" :class="['', { done: note.done }]">
         <label><input type="checkbox" v-model="note.done" /></label>
-        {{ index + 1 }}. {{ note.text }}【{{ note.priority }}】
+        {{ index + 1 }}. {{ note.text }}
+        <span :class="['badge', 'p-' + note.priority]">{{ note.priority }}</span>
       </li>
     </ul>
     <p v-if="filteredNotes.length === 0" class="empty">没有匹配「{{ keyword }}」的笔记</p>
@@ -102,6 +103,28 @@ export default {
 .notes li.done {
   color: var(--muted);
   text-decoration: line-through;
+}
+
+/* 作业2：class 数组语法拼出的三色优先级徽章（高红/中橙/低绿） */
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 999px;
+  padding: 0 8px;
+  margin-left: 6px;
+  color: #fff;
+}
+
+.p-高 {
+  background: #c0392b;
+}
+
+.p-中 {
+  background: #e67e22;
+}
+
+.p-低 {
+  background: #27ae60;
 }
 
 .empty {

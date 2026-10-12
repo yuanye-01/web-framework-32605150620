@@ -51,7 +51,7 @@ export default {
         clearTimeout(this.saveTimer)
         this.saveTimer = setTimeout(() => {
           this.savedTip = '已自动保存 ✓'
-        }, 600)
+        }, 500)
       },
       deep: true,
       immediate: true
