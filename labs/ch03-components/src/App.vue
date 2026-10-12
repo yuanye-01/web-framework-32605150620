@@ -25,7 +25,16 @@
       </div>
     </section>
     <section id="exp-02"><LifecycleDemo /></section>
-    <section id="exp-03"><p class="muted">（任务 7 填充：LocalDemo + GlobalDemo）</p></section>
+    <section id="exp-03">
+      <div class="lab">
+        <h2>实验 03｜组件注册（3.3）</h2>
+        <p class="muted">左：局部注册（App 的 components 选项）｜右：全局注册（main.js 的 app.component，App 里<b>没有 import</b>）</p>
+        <div class="pair">
+          <LocalDemo />
+          <GlobalDemo />
+        </div>
+      </div>
+    </section>
     <section id="exp-04"><p class="muted">（任务 8 完成后挂载 ScopedLab）</p></section>
     <section id="exp-05"><p class="muted">（任务 9 完成后挂载 PropsLab）</p></section>
     <section id="exp-06"><p class="muted">（任务 10 完成后挂载 EmitLab）</p></section>
@@ -37,10 +46,11 @@
 import CountOptions from './experiments/01-apis/CountOptions.vue'
 import CountSetup from './experiments/01-apis/CountSetup.vue'
 import LifecycleDemo from './experiments/02-lifecycle/LifecycleDemo.vue'
+import LocalDemo from './experiments/03-register/LocalDemo.vue'
 
 export default {
   name: 'App',
-  components: { CountOptions, CountSetup, LifecycleDemo }
+  components: { CountOptions, CountSetup, LifecycleDemo, LocalDemo }
 }
 </script>
 
