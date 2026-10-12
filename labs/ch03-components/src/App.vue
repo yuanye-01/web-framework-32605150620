@@ -38,7 +38,7 @@
     <section id="exp-04"><ScopedLab /></section>
     <section id="exp-05"><PropsLab /></section>
     <section id="exp-06"><EmitLab /></section>
-    <section id="exp-07"><p class="muted">（任务 11 完成后挂载 ProvideInjectLab）</p></section>
+    <section id="exp-07"><ProvideInjectLab /></section>
   </div>
 </template>
 
@@ -50,10 +50,11 @@ import LocalDemo from './experiments/03-register/LocalDemo.vue'
 import ScopedLab from './experiments/04-scoped/ScopedLab.vue'
 import PropsLab from './experiments/05-props/PropsLab.vue'
 import EmitLab from './experiments/06-emit/EmitLab.vue'
+import ProvideInjectLab from './experiments/07-provide-inject/ProvideInjectLab.vue'
 
 export default {
   name: 'App',
-  components: { CountOptions, CountSetup, LifecycleDemo, LocalDemo, ScopedLab, PropsLab, EmitLab }
+  components: { CountOptions, CountSetup, LifecycleDemo, LocalDemo, ScopedLab, PropsLab, EmitLab, ProvideInjectLab }
 }
 </script>
 
