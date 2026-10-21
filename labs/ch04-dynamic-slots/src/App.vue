@@ -17,10 +17,10 @@
     <section id="exp-01"><DynamicLab /></section>
     <section id="exp-02"><KeepAliveLab /></section>
     <section id="exp-03"><SlotBasicLab /></section>
-    <section id="exp-04"><p class="muted">（任务 4 完成后挂载 NamedSlotLab）</p></section>
-    <section id="exp-05"><p class="muted">（任务 5 完成后挂载 ScopedSlotLab）</p></section>
-    <section id="exp-06"><p class="muted">（任务 6 完成后挂载 ResumeLab）</p></section>
-    <section id="exp-07"><p class="muted">（任务 7 完成后挂载 DirectiveLab）</p></section>
+    <section id="exp-04"><NamedSlotLab /></section>
+    <section id="exp-05"><ScopedSlotLab /></section>
+    <section id="exp-06"><ResumeLab /></section>
+    <section id="exp-07"><DirectiveLab /></section>
   </div>
 </template>
 
@@ -28,10 +28,14 @@
 import DynamicLab from './experiments/01-dynamic/DynamicLab.vue'
 import KeepAliveLab from './experiments/02-keepalive/KeepAliveLab.vue'
 import SlotBasicLab from './experiments/03-slot-basic/SlotBasicLab.vue'
+import NamedSlotLab from './experiments/04-named-slot/NamedSlotLab.vue'
+import ScopedSlotLab from './experiments/05-scoped-slot/ScopedSlotLab.vue'
+import ResumeLab from './experiments/06-resume/ResumeLab.vue'
+import DirectiveLab from './experiments/07-directive/DirectiveLab.vue'
 
 export default {
   name: 'App',
-  components: { DynamicLab, KeepAliveLab, SlotBasicLab }
+  components: { DynamicLab, KeepAliveLab, SlotBasicLab, NamedSlotLab, ScopedSlotLab, ResumeLab, DirectiveLab }
 }
 </script>
 
