@@ -1,0 +1,143 @@
+/* ============================================================
+   notes-app 全局基础样式（整体替换脚手架的"欢迎页样式"）
+   设计令牌（design token）：想换肤只改这里的变量即可——
+   实验 4 做"夜间模式"时，只需要换一组变量值。
+   注意：scoped 样式里也能用这些全局变量（CSS 变量会继承）。
+============================================================ */
+:root {
+  --primary: #42b883;        /* Vue 绿：主色 */
+  --primary-dark: #33795b;
+  --primary-bg: #eef9f3;
+  --accent: #646cff;         /* 靛蓝：组合式对照组 */
+  --warn: #b8860b;           /* 琥珀：事件实验室 */
+  --text: #2c3e50;
+  --muted: #8b95a1;
+  --bg: #f4f6f8;
+  --border: #e3e8ee;
+  --radius: 10px;
+  --shadow: 0 1px 2px rgba(32, 48, 72, 0.06), 0 4px 12px rgba(32, 48, 72, 0.06);
+
+  font-family: system-ui, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+}
+
+* {
+  box-sizing: border-box;    /* 一行省心：宽度计算含内边距与边框 */
+}
+
+body {
+  margin: 0;
+  /* 页面顶部一抹淡淡的绿色光晕，避免大平面背景显得"平" */
+  background: radial-gradient(900px 280px at 50% -80px, #e2f4ec 0%, transparent 70%), var(--bg);
+  min-height: 100vh;
+}
+
+#app {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 30px 20px 64px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 4px;
+  letter-spacing: 0.5px;
+}
+
+/* 大标题下的渐变色小横线 */
+h1::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin-top: 8px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+h2 {
+  font-size: 18px;
+  margin: 10px 0 12px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+
+/* 统一按钮：为什么放全局？——每个组件里都有按钮，样式应全站一致 */
+button {
+  font: inherit;
+  padding: 5px 14px;
+  margin: 2px 6px 2px 0;
+  color: var(--primary-dark);
+  background: #fff;
+  border: 1px solid var(--primary);
+  border-radius: 999px;             /* 胶囊按钮 */
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+}
+
+button:hover {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(66, 184, 131, 0.35);
+}
+
+button:active {
+  transform: translateY(1px);       /* 按下的"手感" */
+}
+
+/* 统一输入框：聚焦时一圈主题色光晕 */
+input {
+  font: inherit;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(66, 184, 131, 0.15);
+}
+
+label {
+  margin: 2px 8px 2px 0;
+  user-select: none;                /* 点文字勾选更跟手 */
+}
+
+/* 勾选/选中后文字加深——一行小魔法（:has 是新选择器，见注释即可） */
+label:has(input:checked) {
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+ul {
+  padding-left: 22px;
+}
+
+/* ============================================================
+   夜间模式（实验 4 综合任务）：还记得上面的"设计令牌"吗？
+   换肤 = 换一组变量值。.dark 挂在 App 根容器上，
+   内部所有用 var(--xxx) 的样式自动跟着变——这就是变量的威力。
+============================================================ */
+.dark {
+  --primary: #4cd696;
+  --primary-dark: #63d9a4;
+  --primary-bg: #1f3a2e;
+  --text: #e6edf3;
+  --muted: #8b98a9;
+  --bg: #1b2028;
+  --card: #242b36;
+  --border: #3a4452;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.3);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
