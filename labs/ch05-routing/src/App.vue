@@ -15,10 +15,10 @@
       <router-link to="/home">首页</router-link>
       <router-link to="/about">关于</router-link>
       <router-link to="/users">用户列表</router-link>      <!-- 补全：地址见任务 3 -->
-      <router-link to="______">用户中心</router-link>      <!-- 补全：地址见任务 4 -->
-      <router-link to="______">命名路由</router-link>      <!-- 补全：地址见任务 5 -->
-      <router-link to="______">编程式导航</router-link>    <!-- 补全：地址见任务 6 -->
-      <router-link to="______">搜索</router-link>          <!-- 补全：地址见任务 6 -->
+      <router-link to="/center">用户中心</router-link>      <!-- 补全：地址见任务 4 -->
+      <router-link to="/named">命名路由</router-link>      <!-- 补全：地址见任务 5 -->
+      <router-link to="/program">编程式导航</router-link>    <!-- 补全：地址见任务 6 -->
+      <router-link to="/search">搜索</router-link>          <!-- 补全：地址见任务 6 -->
     </nav>
 
     <!-- $route.fullPath = 当前完整地址——地址栏的"回声"，实验时盯它 -->
